@@ -8,7 +8,7 @@ import {MoviesService} from '../shared/movies.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories;
+  categories:any[];
 
   constructor(private moviesService: MoviesService) { }
 
