@@ -9,13 +9,13 @@ import {MoviesService} from '../shared/movies.service';
 
 export class HomeComponent implements OnInit {
 
-  movies:any[];
-  categories:any[];
-  randomId:any[];
-  randomRecommendedId:any[];
-  newReleaseId:any[];
+  movies;
+  categories;
+  randomId;
+  randomRecommendedId;
+  newReleaseId;
 
-  constructor(private moviesService: MoviesService){
+  constructor(public moviesService: MoviesService){
   }
 
   ngOnInit(){

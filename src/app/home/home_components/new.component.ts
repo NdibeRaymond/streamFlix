@@ -28,8 +28,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
 export class NewReleaseComponent{
-  @Input() newRelease:any[];
-  constructor(private sanitizer: DomSanitizer){
+  @Input() newRelease;
+  constructor(public sanitizer: DomSanitizer){
 
   }
   formatter=(value)=>{

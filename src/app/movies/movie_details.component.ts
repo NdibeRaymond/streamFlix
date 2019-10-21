@@ -65,7 +65,7 @@ export class MovieDetailsComponent implements OnInit,OnDestroy {
     randomRecommendedId;
     newReleaseId;
 
-  constructor(private sanitizer: DomSanitizer, private moviesService: MoviesService,
+  constructor(public sanitizer: DomSanitizer, public moviesService: MoviesService,
     private route: ActivatedRoute,
      private router:Router){
 

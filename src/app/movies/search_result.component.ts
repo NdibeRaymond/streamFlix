@@ -28,14 +28,14 @@ import {SearchService} from '../shared/search.service';
 
 
 export class SearchResultComponent implements OnInit,OnDestroy {
-  searchTerm:any;
-  movies:any[];
-  search_results:any[];
+  searchTerm;
+  movies;
+  search_results;
   navigationSubscription;
 
 
-  constructor(private moviesService: MoviesService,private route: ActivatedRoute,
-     private router:Router, private searchService: SearchService){
+  constructor(public moviesService: MoviesService,private route: ActivatedRoute,
+     private router:Router, public searchService: SearchService){
 
     this.navigationSubscription = this.router.events.subscribe((e: any) => {
     // If it is a NavigationEnd event re-initalise the component

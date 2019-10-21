@@ -12,7 +12,7 @@ import {Component,Input} from '@angular/core';
 
 
 export class CategoryComponent{
-  @Input() category:any;
+  @Input() category;
 
   constructor(){
 

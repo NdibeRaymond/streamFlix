@@ -30,9 +30,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 export class ThumbnailComponent{
 
-@Input() movie:any;
+@Input() movie;
 
-constructor(private sanitizer: DomSanitizer){
+constructor(public sanitizer: DomSanitizer){
 
 }
 

@@ -9,11 +9,11 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class MoviesComponent implements OnInit {
 
-  category:any[];
-  movies:any[]
-  moviesInCategory:any[];
+  category;
+  movies;
+  moviesInCategory;
 
-  constructor(private moviesService: MoviesService,private route: ActivatedRoute) { }
+  constructor(public moviesService: MoviesService,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.movies = this.moviesService.getMovies();

@@ -15,7 +15,7 @@ import {MoviesService} from './movies.service';
 
 
 export class FavoriteComponent {
-  @Input() id:any;
+  @Input() id;
   // @Input() isFavorite:boolean;
   // @Output() toggleFavorite = new EventEmitter();
   //
@@ -23,7 +23,7 @@ export class FavoriteComponent {
   //   this.toggleFavorite.emit({})
   // }
 
-  constructor(private moviesService: MoviesService){
+  constructor(public moviesService: MoviesService){
 
   }
 

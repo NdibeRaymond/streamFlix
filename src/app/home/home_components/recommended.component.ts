@@ -39,10 +39,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 export class RecommendedComponent implements OnInit{
 
-  @Input() recommended:any;
+  @Input() recommended;
 
 
-  constructor(private sanitizer: DomSanitizer){
+  constructor(public sanitizer: DomSanitizer){
 
 }
 

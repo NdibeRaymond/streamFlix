@@ -26,7 +26,7 @@ export class FavoritePageComponent implements OnInit{
   favorite_movies;
   movies;
 
- constructor(private moviesService: MoviesService){
+ constructor(public moviesService: MoviesService){
 
  }
 

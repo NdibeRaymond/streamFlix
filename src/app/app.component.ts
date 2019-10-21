@@ -12,12 +12,12 @@ import {MoviesService} from './shared/movies.service';
 export class AppComponent implements OnInit {
   title = 'ng-netflixClone';
 
-  constructor(public authService:AuthService,private moviesService: MoviesService,public router: Router){
+  constructor(public authService:AuthService,public moviesService: MoviesService,public router: Router){
 
   }
 
   ngOnInit(){
-    
+
   }
 
   moviesSearch(fields){
