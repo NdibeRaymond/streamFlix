@@ -342,13 +342,17 @@ a:hover,a:active{
 
 
 .header-container{
-  position:absolute;
-  top:300px;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
   text-align: center;
-  display:flex;
-  justify-content:center;
-  align-items: center;
+  position:absolute;
+  top:250px;
+  display: block;
   color:white;
+}
+.header-container h1{
+font-weight: bold;
+color:rgba(200,200,200)
 }
 
 

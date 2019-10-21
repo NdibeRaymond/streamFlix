@@ -15,7 +15,7 @@ import {SearchService} from '../shared/search.service';
     <h1 class="text-uppercase mx-4 gold">Search Results</h1>
     <p class="mx-4">{{search_results.length}} results found for {{searchTerm}}</p>
     <div class="row mx-4">
-      <div class="event p-0 col-lg-4 col-md-6 col-12" *ngFor="let movie of search_results ">
+      <div class="event p-0 col-lg-4 col-md-6 col-12" [] *ngFor="let movie of search_results ">
       <thumbnail [movie]="movie"></thumbnail>
       </div>
 
