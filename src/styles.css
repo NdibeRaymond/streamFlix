@@ -1,0 +1,410 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Navbar start */
+
+header#header{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.lighter-black{
+  border:none;
+  background-color: #121212;
+  padding: 3px;
+}
+
+.lighter-black a.gold {
+  color: #F5C308;
+  background-color: #171717;
+}
+
+.lighter-black a.gold:hover {
+  color: #F5C308;
+  background-color: #1c1c1c;
+}
+
+.text {
+  color: #F5f3f8;
+  background-color: #171717;
+}
+
+.lighter-black select {
+  margin-top: 4px;
+  padding: 3px;
+  background-color: #F5C308;
+  color: black;
+}
+
+.lighter-black form div input {
+  color: #white;
+  background-color: #cccccc;
+  border:none;
+  margin-top: 3px;
+}
+
+.lighter-black form div div button {
+  color: #white;
+  background-color: #cccccc;
+  border:none;
+  margin-top: 3px;
+}
+
+
+@media only screen and (max-width: 815px) {
+  nav.lighter-black a.help,nav.lighter-black span.language {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+    border:0px;
+  }
+}
+
+@media only screen and (max-width: 648px) {
+  nav.lighter-black select.country {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+    border:0px;
+  }
+}
+
+@media only screen and (max-width: 494px) {
+  nav.lighter-black div.social-media {
+    padding-left: 24vw;
+  }
+}
+
+
+.darker-black{
+
+  background-color: #040404;
+  border:none;
+  color:white;
+}
+
+nav.darker-black button i.fas{
+  color: #F5C308;
+}
+
+a.toggler{
+  color: white;
+  text-decoration: none;
+}
+
+.darker-black a.gold{
+  color: #F5C308;
+}
+
+div.dropdown-menu{
+  background-color: #121212;
+}
+
+div.dropdown-menu a.dropdown-item{
+  color: #F5f3f8;
+}
+
+div.dropdown-menu a.dropdown-item:hover{
+  color: black;
+  background-color: #F5C308;
+}
+
+/* Navbar end */
+
+
+/* Hero start */
+
+section.hero-section{
+  background: url(assets/images/Sawyer-Niehaus-in-Wonderstruck-2017.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 0px;
+  height: 70vh;
+}
+
+section.hero-section div form.login{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section.hero-section div form.login button.gold{
+  background-color: #F5C308;
+  color: black;
+  border: none;
+  padding-right: 20px;
+}
+
+
+section.hero-section div form.login input{
+  background-color: #cccccc;
+}
+
+
+section.hero-section div form.login a{
+ color: white;
+ text-decoration: none;
+}
+
+section.hero-section div form.login a:hover{
+ color: white;
+ text-decoration: none;
+}
+
+/* Hero end */
+
+/* 2116206107 */
+
+/* Caurosel start */
+div.event{
+height: 40vh;
+margin-top:1em;
+}
+
+
+section.event-caurosel{
+  background-color: #0E0E0E;
+  color: white;
+}
+
+/* section.event-caurosel div div div div{
+  height: 200px;
+  width: 30%;
+} */
+
+section.event-caurosel div div div div div img.caurosel-img{
+  max-height: 100px;
+  width: auto;
+}
+
+
+section.event-caurosel div div div div div a.gold{
+  background-color: #F5C308;
+  color: black;
+}
+
+section.event-caurosel div div div.event {
+  background-color: white;
+  border: 5px solid #0E0E0E ;
+  color: black;
+}
+/* caurosel end */
+
+
+
+/* cartegories start */
+section.cartegories{
+  background-color: #151515;
+  color: white;
+}
+
+section.cartegories div div div img.event-img{
+  max-height: 150px;
+  width: 100%;
+}
+
+section.cartegories div hr{
+  background-color: black;
+  width: 100%;
+}
+/* cartegories end */
+
+
+/* more start */
+section.more{
+  background-color: #151515;
+  color: white;
+}
+
+section.more div div figure.event-card{
+  margin-left: 0px;
+  margin-right: 0px;
+  border-right:1px solid black;
+  border-left: 1px solid black;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #0E0E0E;
+  color: white;
+}
+
+/* section.more div div figcaption.info-wrap{
+
+} */
+
+section.more div div figcaption.info-wrap p.gold{
+  color: #F5C308;
+  font-size: 1.2rem;
+}
+
+section.more div div div figure.event-card div.img-wrap{
+  overflow: hidden;
+  border-radius: 0.2rem 0.2rem 0 0;
+    overflow: hidden;
+    height: 150px;
+    text-align: center;
+}
+
+section.more div div div figure.event-card div.img-wrap img{
+  height: 100%;
+  width: 100%;
+  border:1px solid white;
+}
+
+
+
+section.more div.community div div div img.user-img{
+  height: 80px;
+  width: auto;
+  border:1px solid white;
+}
+
+section.more div.community div.user-profile{
+  max-width: 40%;
+  background-color: #0E0E0E;
+  color: white;
+}
+
+section.more div.community div.user-profile div div p.gold{
+  color: #F5C308;
+}
+
+section.more div.community a.gold{
+  text-decoration: none;
+  color: #F5C308;
+}
+
+section.more div.community a.gold:hover{
+  text-decoration: none;
+  color: #F5C308;
+}
+
+/* more end */
+
+.footer-title-line{
+  background-color:#F5C308;
+  margin: 0px;
+  position: absolute;
+  width: 200%;
+  left: -50%;
+}
+
+footer{
+  position: relative;
+}
+
+
+
+
+.footer-link{
+  color: white;
+}
+
+.footer-link:hover{
+  color: white;
+}
+
+.gold{
+  color: #F5C308;
+}
+.white{
+  color: white;
+}
+
+footer div div div p.gold{
+  color: #F5C308;
+}
+
+footer div div a{
+  color: white;
+}
+
+footer div div a:hover{
+  color: white;
+}
+
+
+a:hover,a:active{
+  text-decoration: none;
+  cursor: pointer;
+  color: #F5C308;
+}
+
+.pointable{
+  cursor: pointer;
+}
+
+
+
+
+.header-container{
+  position:absolute;
+  top:300px;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  color:white;
+}
+
+
+
+.containerr {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 100%;
+	 height: 100vh;
+}
+ .chevron {
+	 position: absolute;
+	 width: 2.1rem;
+	 height: 0.48rem;
+	 opacity: 0;
+	 transform: scale(0.3);
+	 animation: move-chevron 3s ease-out infinite;
+}
+ .chevron:first-child {
+	 animation: move-chevron 3s ease-out 1s infinite;
+}
+ .chevron:nth-child(2) {
+	 animation: move-chevron 3s ease-out 2s infinite;
+}
+ .chevron:before, .chevron:after {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 height: 100%;
+	 width: 50%;
+	 background: #F5C308;
+}
+ .chevron:before {
+	 left: 0;
+	 transform: skewY(30deg);
+}
+ .chevron:after {
+	 right: 0;
+	 width: 50%;
+	 transform: skewY(-30deg);
+}
+ @keyframes move-chevron {
+	 25% {
+		 opacity: 1;
+	}
+	 33.3% {
+		 opacity: 1;
+		 transform: translateY(2.28rem);
+	}
+	 66.6% {
+		 opacity: 1;
+		 transform: translateY(3.12rem);
+	}
+	 100% {
+		 opacity: 0;
+		 transform: translateY(4.8rem) scale(0.5);
+	}
+}

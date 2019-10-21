@@ -1,0 +1,14 @@
+<section class="cartegories">
+  <div style="display:block;height:200px"></div>
+  <div class="container">
+    <h1 class="gold text-uppercase mx-5">All Categories</h1>
+    <div class="row mx-5">
+      <div class="events col-lg-4 col-md-6 col-sm-12" *ngFor="let category of categories">
+        <a class="white" [routerLink]="[category.name]">
+          <p class="text-uppercase mx-4">{{category.name}}</p>
+          <img class="event-img m-2" [src]="category.image" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+</section>

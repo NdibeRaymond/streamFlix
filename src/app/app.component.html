@@ -1,0 +1,187 @@
+<header id="header">
+  <nav class="text-center lighter-black navbar navbar-expand-lg">
+
+              <form class="m-auto  form-inline my-2 my-lg-0" #searchForm="ngForm" (ngSubmit)="moviesSearch(searchForm.value)">
+
+              <div class="input-group">
+
+                   <input (ngModel) = "searchTerm" name="searchTerm" class="form-control h-25" type="text" placeholder="Search here" aria-label="Search">
+                    <div class="input-group-append">
+                      <button  class="btn btn-sm btn-light" type="submit">
+                        <i class="fa fa-search"></i>
+
+                      </button>
+                  
+                    </div>
+                  </div>
+            </form>
+
+
+
+          <span *ngIf="!isLoggedIn()">
+
+            <a [routerLink]="['/signup']" class="home pl-2 toggler gold">Signup</a>
+
+            <span class="home pl-2 toggler p-2 text-white">|</span>
+
+            <a [routerLink]="['/login']" class="home pl-2 toggler mr-5 gold">Login</a>
+
+          </span>
+
+          <span *ngIf="isLoggedIn()">
+
+            <a class="home pl-2 toggler gold">{{getUserEmail()}}</a>
+
+            <span class="home pl-2 toggler p-2 text-white">|</span>
+
+            <a class="home pl-2 toggler mr-5 gold" (click)="signOut()">Logout</a>
+
+          </span>
+
+
+
+
+  </nav>
+
+
+  <nav class="darker-black navbar navbar-expand-lg" id="mainNav">
+
+    <a [routerLink]="['/']" class="gold btn btn-sm navbar-icon"><h2>StreamFlix</h2></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#second_nav_bar_toggler" aria-controls="second navbar toggler" aria-expanded="false" aria-label="Toggle second navigation">
+  <i class="fa fa-bars gold"></i>
+</button>
+
+
+<div class="collapse navbar-collapse" id="second_nav_bar_toggler">
+
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-5">
+
+      <li class="nav-item home pl-2">
+        <a href="#hero" class="nav-link js-scroll-trigger toggler mr-5">Home</a>
+      </li>
+      <li class="nav-item  pl-2">
+        <a href="#latest" class="nav-link js-scroll-trigger toggler mr-5">Latest</a>
+      </li>
+    <li class="nav-item  pl-2">
+      <a [routerLink]="['/categories']" class="nav-link js-scroll-trigger toggler mr-5">Categories</a>
+    </li>
+
+    <li class="nav-item  pl-2">
+      <a href="#recommended" class="nav-link js-scroll-trigger toggler mr-5">Recommended</a>
+    </li>
+
+    <li class="nav-item  pl-2">
+    <a href="#new-releases" class="nav-link js-scroll-trigger toggler">New Release</a>
+    </li>
+
+    <li class="nav-item  pl-2">
+    <a href="/favorites" class="nav-link js-scroll-trigger toggler">
+      <span class="" style="background-color:gray;padding:0.5em 0.7em;border-radius:20px"><i class="fa fa-heart" style="color:red"></i><i style="color:white">{{moviesService.getFavoriteCount()}}</i></span>
+    </a>
+    </li>
+
+  </ul>
+</div>
+
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer class="darker-black text-center">
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-2 col-md-4 col-6">
+      <hr class="footer-title-line">
+      <p class="py-2 my-0 gold text-uppercase font-weight-bold">about</p>
+      <hr class="footer-title-line">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="footer-link" href="#">tillate international</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Terms</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Data security</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Privacy Policy</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Numbers</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <hr class="footer-title-line">
+      <p class="py-2 my-0 gold text-uppercase font-weight-bold">products</p>
+      <hr class="footer-title-line">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="footer-link" href="#">Eventlistings</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Photo shooting</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Live stream</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Ticketing</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Music Download</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Shop</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <hr class="footer-title-line">
+      <p class="py-2 my-0 gold text-uppercase font-weight-bold">press</p>
+      <hr class="footer-title-line">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="footer-link" href="#">Worldwide</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Europe</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">America</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Rest</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Download</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Impression</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <hr class="footer-title-line">
+      <p class="py-2 my-0 gold text-uppercase font-weight-bold">staff</p>
+      <hr class="footer-title-line">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="footer-link" href="#">Global Management</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Country Managers</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Regional Managers</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Photographer Request</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Jobs</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Submit Cv</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-4 col-6">
+      <hr class="footer-title-line">
+      <p class="py-2 my-0 gold text-uppercase font-weight-bold">investors</p>
+      <hr class="footer-title-line">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="footer-link" href="#">Tillate Overview</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Vision</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Growth</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Expansion</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Financials</a></li>
+        <li class="nav-item"><a class="footer-link" href="#">Contact Management</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="mt-5 pt-5 flex-block justify-content-center">
+  <div><a href="#">Advertisers/Media Pack</a> | <a href="#">FAQ</a> | <a href="#">Cookie Policy</a></div>
+  <div class="">
+    <h1 class="gold">StreamFlix</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12">
+      <address class="">
+        <p>&copy;StreamFlix international inc. made with <i class="fa fa-heart" style="color:red;font-size:1.5em"></i> by <a href="https://www.linkedin.com/in/raymond-ndibe-3a67b9160/" class="gold"><span>Raymond</span></a></p>
+      </address>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12">
+      <a href="" class="gold btn btn-sm"><i class="fa fa-rss"></i></a>
+      <a href="" class="gold btn btn-sm"><i class="fa fa-facebook-f" ></i></a>
+      <a href="" class="gold btn btn-sm"><i class="fa fa-instagram"></i></a>
+      <a href="" class="gold btn btn-sm"><i class="fa fa-twitter"></i></a>
+      <a href="" class="gold btn btn-sm"><i class="fa fa-vimeo"></i></a>
+      <a href="" class="gold btn btn-sm"><i class="fa fa-pinterest-p"></i></a>
+      <a href="" class="gold btn btn-sm"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+</footer>

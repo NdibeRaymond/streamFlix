@@ -1,0 +1,64 @@
+<<div class="" style="height:4em">
+</div>
+<section class="hero-section" id="hero">
+  <div class="header-container">
+    <h1 id="header-text">Watch Over 200 Videos Now For Free</h1>
+    
+  </div>
+  <div class="containerr">
+  <div class="chevron"></div>
+  <div class="chevron"></div>
+  <div class="chevron"></div>
+  </div>
+</section>
+
+<section class="event-caurosel pt-5" id="latest">
+<div class="container">
+  <p class="text-uppercase mx-4 gold">Latest Movies</p>
+  <div class="row mx-4">
+    <div class="event p-0 col-lg-4 col-md-6 col-12" *ngFor="let id of randomId ">
+    <thumbnail [movie]="movies[id]"></thumbnail>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="cartegories" id="categories">
+<div class="container">
+  <p class="text-uppercase mx-4 pt-5 pb-5 gold">Categories<a class="gold float-right" [routerLink]="['/categories']">All Categories</a></p>
+  <div class="row  mx-5">
+    <div class="event col-lg-4 col-md-6 col-12" *ngFor="let category of categories.slice(0,3)">
+      <category [category]="category"></category>
+    </div>
+
+  </div>
+  <hr class="mb-0 pb-0">
+</div>
+</section>
+
+<section class="more pl-5 py-5">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 col-12" id="recommended">
+      <p class="text-uppercase gold">Recommended</p>
+      <div class="row">
+        <div class="pl-0 pr-0 col-lg-4 col-md-4 col-12" *ngFor="let id of randomRecommendedId">
+          <figure class="card event-card">
+            <recommended [recommended]="movies[id]"></recommended>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="community col-lg-5 col-md-6 col-12" id="new-releases">
+      <p class="text-uppercase gold">New Releases</p>
+      <div class="row">
+        <div class="user-profile p-2 mx-3 mb-3 col-lg-6 col-md-6 col-12" *ngFor="let id of newReleaseId">
+          <new-release [newRelease]="movies[id]"></new-release>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
