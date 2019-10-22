@@ -5,17 +5,19 @@ import {MoviesComponent} from './movies/movies.component';
 import {SearchResultComponent} from './movies/search_result.component';
 import {SignupComponent} from './auth/signup/signup.component';
 import {LoginComponent} from './auth/login/login.component';
-import {FavoritePageComponent} from './shared/favoritepage.component';
+import {FavoritePageComponent} from './movies/favoritepage.component';
 import {MovieDetailsComponent} from './movies/movie_details.component';
+import {_NotFoundCompnent} from './shared/notfound.component';
 
 
 export const appRoutes:Routes = [
+  {path:"search/:searchTerm",component:SearchResultComponent,runGuardsAndResolvers: "always"},
   {path:"movies/:id/details",component:MovieDetailsComponent,runGuardsAndResolvers:"always"},
   {path:"categories/:name",component:MoviesComponent},
   {path:"categories",component:CategoriesComponent},
-  {path:"",component:HomeComponent},
-  {path:"signup",component:SignupComponent},
-  {path:"login",component:LoginComponent},
   {path:"favorites",component:FavoritePageComponent},
-  {path:"search/:searchTerm",component:SearchResultComponent,runGuardsAndResolvers: "always"}
+  {path:"login",component:LoginComponent},
+  {path:"signup",component:SignupComponent},
+  {path:"",component:HomeComponent},
+  {path:"",compnent:_NotFoundComponent}
 ]
