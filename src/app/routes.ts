@@ -7,7 +7,7 @@ import {SignupComponent} from './auth/signup/signup.component';
 import {LoginComponent} from './auth/login/login.component';
 import {FavoritePageComponent} from './movies/favoritepage.component';
 import {MovieDetailsComponent} from './movies/movie_details.component';
-import {_NotFoundCompnent} from './shared/notfound.component';
+import {_NotFoundComponent} from './shared/notfound.component';
 
 
 export const appRoutes:Routes = [
