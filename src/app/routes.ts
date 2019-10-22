@@ -19,5 +19,5 @@ export const appRoutes:Routes = [
   {path:"login",component:LoginComponent},
   {path:"signup",component:SignupComponent},
   {path:"",component:HomeComponent},
-  {path:"",compnent:_NotFoundComponent}
+  {path:"",component:_NotFoundComponent}
 ]

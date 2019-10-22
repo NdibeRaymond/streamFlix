@@ -22,8 +22,9 @@ import {SearchResultComponent} from './movies/search_result.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import {FavoriteComponent} from './shared/favorite.component';
-import {FavoritePageComponent} from './shared/favoritepage.component';
+import {FavoritePageComponent} from './movies/favoritepage.component';
 import {MovieDetailsComponent} from './movies/movie_details.component';
+import {_NotFoundComponent} from './shared/notfound.component';
 
 import {MoviesService} from './shared/movies.service';
 import {SearchService} from './shared/search.service';
@@ -49,7 +50,8 @@ import {appRoutes} from './routes';
     SignupComponent,
     FavoriteComponent,
     FavoritePageComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    _NotFoundComponent
   ],
   imports: [
     FormsModule,
