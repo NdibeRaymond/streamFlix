@@ -1,7 +1,7 @@
-import {Compnent} from '@angular/core';
+import {Component} from '@angular/core';
 
 
-@Compnent({
+@Component({
 	template:`
 	<div class="jumbotron">
 	<h1>Oops, this is the end of the internet</h1>
@@ -11,6 +11,6 @@ import {Compnent} from '@angular/core';
 })
 
 
-export class _NotFoundCompnent{
+export class _NotFoundComponent{
 	
 }
