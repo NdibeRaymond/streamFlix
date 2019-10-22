@@ -48,8 +48,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
      </div>
    </div>
  </div>
+ <div style="height:100px"></div>
  </section>
-
+ 
   `,
   styles:[
     `

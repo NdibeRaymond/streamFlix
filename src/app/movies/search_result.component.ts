@@ -21,6 +21,7 @@ import {SearchService} from '../shared/search.service';
 
     </div>
   </div>
+  <div style="height:100px"></div>
   </section>
 
   `

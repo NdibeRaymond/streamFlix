@@ -16,6 +16,7 @@ import {MoviesService} from '../shared/movies.service';
 
     </div>
   </div>
+  <div style="height:100px"></div>
   </section>
   `
 })
