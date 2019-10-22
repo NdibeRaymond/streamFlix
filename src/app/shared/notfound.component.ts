@@ -1,4 +1,4 @@
-imort {Compnent} from '@angular/core';
+import {Compnent} from '@angular/core';
 
 
 @Compnent({
